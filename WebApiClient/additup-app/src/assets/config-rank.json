@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 0,
+        "jsonURL" : "./assets/beginner-qns.json",
+        "rank" : "beginner"
+    },
+    {
+        "id" : 1,
+        "jsonURL" : "./assets/talented-qns.json",
+        "rank" : "talented"
+    },
+    {
+        "id" : 2,
+        "jsonURL" : "./assets/intermediate-qns.json",
+        "rank" : "intermediate"
+    },
+    {
+        "id" : 3,
+        "jsonURL" : "./assets/advanced-qns.json",
+        "rank" : "advanced"
+    },
+    {
+        "id" : 4,
+        "jsonURL" : "./assets/expert-qns.json",
+        "rank" : "expert"
+    }
+]
