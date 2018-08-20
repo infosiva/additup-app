@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+.active
+{
+    font-size: 30px;
+    font-weight: 500
+}
+.btn
+{
+    font-size: 15px !important;
+}
+
+#btn-options.btn 
+{
+    padding-left: 10px !important;
+}
+
+.btn.active
+{
+    font-size: 30px !important;
+}
+
+
+#rank-div
+{
+    align-content:flex-end
+}
+
+body {
+    font-size: 20px;
+}
+
+#rank-span
+{
+    padding: 30px;
+}
