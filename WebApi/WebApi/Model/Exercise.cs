@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using AutoMapper;
 using System.IO;
 using Microsoft.DotNet.PlatformAbstractions;
+using System.Collections;
 
 namespace WebApi.Model
 {
@@ -28,8 +29,32 @@ namespace WebApi.Model
         public static Exercise createExercise()
         {
 
-            var shoppingCartObj = JsonConvert.DeserializeObject<Exercise>(getJSONData());
-            return shoppingCartObj;
+            var exerciseList= JsonConvert.DeserializeObject<Exercise>(getJSONData());
+            var shuffledArr = Shuffle<question>(exerciseList.questions);
+            exerciseList.questions = shuffledArr;
+            return exerciseList;
+        }
+
+        private static T[] Shuffle<T>(T[] OriginalArray)
+        {
+            var matrix = new SortedList();
+            var r = new Random();
+            
+
+            for (var x = 0; x <= OriginalArray.Length -1; x++)
+            {
+                var i = r.Next(0, OriginalArray.Length); ;
+
+                while (matrix.ContainsKey(i)) { i = r.Next(0, OriginalArray.Length); }
+
+                matrix.Add(i, OriginalArray[x]);
+            }
+
+            var OutputArray = new T[OriginalArray.Length];
+
+            matrix.Values.CopyTo(OutputArray, 0);
+
+            return OutputArray;
         }
 
         public static string getJSONData()
