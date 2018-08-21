@@ -6,5 +6,8 @@ step 1: run  the webapi from the below location - WebApi\WebApi\ and if the conf
 # WEBAPI Client
 step 2: after webapi runs and its required change the URL of the api on the below file.
         \WebApiClient\additup-app\src\config.ts.
+# Install required NPM packages
 step 3: npm install \WebApiClient\additup-app 
+
+# run the front end 
 step 4: ng serve
